@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+   Create Page
+{% endblock %}
+
+{% block body %}
+{% if present == True%}
+<div class="alert alert-danger" role="alert">
+    <i><b>Page already exists</b></i>
+</div>
+{% endif%}
+<form action ="{% url 'create' %}", method="post">
+    {% csrf_token %}
+    {{ form1}}
+    <button type ="submit" class="btn btn-outline-primary" style="margin-top: 25px;">Submit</button>
+</form>
+{% endblock %}

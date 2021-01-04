@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+   {{ html|safe }} 
+   
+    <a href="/edit/{{title}}"><button type ="submit" class="btn btn-outline-primary" style="margin-top: 25px;">Edit</button></a>
+   
+{% endblock %}
