@@ -17,7 +17,7 @@
               <h5 class="card-title">{{i.title}}</h5>
               <p class="card-text">{{i.description}}</p>
               <p class="card-text">${{i.price}}</p>
-              <a href="{% url 'listingpage' i.id %}"><button class="btn btn-outline-success">{% if active %}Bid Now! {% else %} Sold {% endif%}</button></a>
+              <a href="{% url 'listingpage' i.id %}"><button class="btn btn-outline-success">{% if i.active %}Bid Now! {% else %} Sold {% endif%}</button></a>
               <p class="card-text"><small class="text-muted">{{i.time}}</small></p>
             </div>
           </div>
